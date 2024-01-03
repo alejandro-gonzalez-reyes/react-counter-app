@@ -1,10 +1,13 @@
+// Librería de React
 import React from 'react'
+// Librería que especifica en que ambiente trabajará React (DOM = Navegador Web)
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// Importar algún componente válido de react
+import App from './App';
 
+// Renderizar aplicación de React en algún nodo de nuestro documento HTML principal
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);

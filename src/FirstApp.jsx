@@ -61,7 +61,7 @@ export const FirstApp = () => {
         encuentra definido como una clase
       </p>
       <p>
-        <strong>{obtenerNombreConProfesion('programador web sr.')}</strong>
+        <strong>{obtenerNombreConProfesion('Desarrollador Web SR.')}</strong>
       </p>
     </>
   );

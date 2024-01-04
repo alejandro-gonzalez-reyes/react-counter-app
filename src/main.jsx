@@ -19,6 +19,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <ComponentePrincipal /> */}
     {/* <MiOtroComponentePrincipal /> */}
     {/* <SuperComponente /> */}
-    <FirstApp />
+
+    {/* 
+    Pasar props al componente (parámetros) 
+    Los props son los responsables de que nuestros componentes muestren información dinámica y se les pueda reutilizar en diferentes contextos de la aplicación
+    
+    La información pasada en cada propiedad del componente por defecto es tratada como texto, 
+    sin embargo, podemos especificar su tipo si se hace uso de la interpolación (llaves)
+    */}
+    <FirstApp
+      title="Mi Componente"
+      subtitle="Interpolación, Estilos y Propiedades"
+      cantidad={1250}
+    />
   </React.StrictMode>
 );

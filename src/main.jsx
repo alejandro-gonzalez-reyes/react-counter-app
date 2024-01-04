@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './App';
 // import ComponentePrincipal from './ComponentePrincipal';
 // import { MiOtroComponentePrincipal } from './ComponentePrincipal';
-import { SuperComponente } from './ComponentePrincipal';
+// import { SuperComponente } from './ComponentePrincipal';
+import { FirstApp } from './FirstApp';
 
 
 // Renderizar aplicación de React en algún nodo de nuestro documento HTML principal
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <App /> */}
         {/* <ComponentePrincipal /> */}
         {/* <MiOtroComponentePrincipal /> */}
-        <SuperComponente />
+        {/* <SuperComponente /> */}
+        <FirstApp />
     </React.StrictMode>
 );

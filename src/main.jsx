@@ -7,10 +7,11 @@ import ReactDOM from "react-dom/client";
 // import ComponentePrincipal from './ComponentePrincipal';
 // import { MiOtroComponentePrincipal } from './ComponentePrincipal';
 // import { SuperComponente } from './ComponentePrincipal';
-import { FirstApp } from "./FirstApp";
+// import { FirstApp } from "./FirstApp";
 
 // Importar una hoja de estilo que se aplicará de forma global en los componentes de la aplicación
 import "./main.css";
+import { CounterApp } from "./CounterApp";
 
 // Renderizar aplicación de React en algún nodo de nuestro documento HTML principal
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -29,11 +30,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     Si una prop solo es declarada sin presencia de valor, por defecto React la considera como tipo boolean establecida en true
     */}
-    <FirstApp
+    {/* <FirstApp
       title="Mi Componente"
       cantidad={1250}
       slogan="Este es un componente que muestra muchas cosas interesantes en React"
       esImportante
-    />
+    /> */}
+
+    <CounterApp value={5} />
   </React.StrictMode>
 );

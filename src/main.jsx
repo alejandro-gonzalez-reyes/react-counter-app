@@ -26,11 +26,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     
     La información pasada en cada propiedad del componente por defecto es tratada como texto, 
     sin embargo, podemos especificar su tipo si se hace uso de la interpolación (llaves)
+
+    Si una prop solo es declarada sin presencia de valor, por defecto React la considera como tipo boolean establecida en true
     */}
-    <FirstApp
-      title="Mi Componente"
-      subtitle="Interpolación, Estilos y Propiedades"
-      cantidad={1250}
-    />
+    <FirstApp title="Mi Componente" cantidad={1250} esImportante />
   </React.StrictMode>
 );

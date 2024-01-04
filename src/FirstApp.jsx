@@ -1,3 +1,6 @@
+// Importar la librería de definición de tipos para las Props
+import PropTypes from "prop-types";
+
 // Contenido que no cambie y que sea usado dentro de nuestros componentes, React recomienda sacarlo fuera del cuerpo de nuestros componentes.
 // Esto no significa que esté disponible en el ámbito global, solo estará disponible a nivel de módulo (archivo)
 // Al moverlo fuera de nuestros componentes, React renderizará más rápido los cambios, ya que no perderá tiempo en procesar dicha información que jamás cambia
@@ -30,9 +33,10 @@ const obtenerNombreConProfesion = (profesion) => {
  * const MiComponente({nombre = 'Desconocido'}) {}
  */
 export const FirstApp = ({
-  title = "Mi Componente Principal",
-  subtitle,
+  title,
+  subtitle = "Interpolación, Estilos y Propiedades",
   cantidad,
+  esImportante,
 }) => {
   return (
     // Fragmento <> en React
@@ -41,6 +45,7 @@ export const FirstApp = ({
       <h3>
         {subtitle} - <mark>{cantidad + 360}</mark>
       </h3>
+      {esImportante && <p>El componente fue marcado como importante</p>}
       <p>
         Los Fragment en React, nos permiten encapsular o agrupar contenido sin
         que exista necesidad de utilizar una etiqueta HTML para ello. Son útiles
@@ -85,4 +90,12 @@ export const FirstApp = ({
       </p>
     </>
   );
+};
+
+// Especificar el tipo de dato de las props que espera este componente, así como si deben ser o no obligatorias
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  cantidad: PropTypes.number.isRequired,
+  esImportante: PropTypes.bool.isRequired,
 };

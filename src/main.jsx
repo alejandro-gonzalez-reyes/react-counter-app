@@ -29,6 +29,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     Si una prop solo es declarada sin presencia de valor, por defecto React la considera como tipo boolean establecida en true
     */}
-    <FirstApp title="Mi Componente" cantidad={1250} esImportante />
+    <FirstApp
+      title="Mi Componente"
+      cantidad={1250}
+      slogan="Este es un componente que muestra muchas cosas interesantes en React"
+      esImportante
+    />
   </React.StrictMode>
 );

@@ -37,6 +37,7 @@ export const FirstApp = ({
   subtitle = "Interpolación, Estilos y Propiedades",
   cantidad,
   esImportante,
+  slogan,
 }) => {
   return (
     // Fragmento <> en React
@@ -46,6 +47,7 @@ export const FirstApp = ({
         {subtitle} - <mark>{cantidad + 360}</mark>
       </h3>
       {esImportante && <p>El componente fue marcado como importante</p>}
+      <p>{slogan}</p>
       <p>
         Los Fragment en React, nos permiten encapsular o agrupar contenido sin
         que exista necesidad de utilizar una etiqueta HTML para ello. Son útiles
@@ -92,10 +94,23 @@ export const FirstApp = ({
   );
 };
 
-// Especificar el tipo de dato de las props que espera este componente, así como si deben ser o no obligatorias
+// ? La definición de PropTypes y DefaultProps siempre se debe hacer al final de la declaración del componente
+
+// ! Si alguna prop no coincide con su tipo, el error es lanzado en consola del navegador, o mediante mensajes haciendo uso de las React Dev Tools
+
+// Especificar el tipo de dato de las props que espera este componente,
+// así como si deben ser o no obligatorias
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   cantidad: PropTypes.number.isRequired,
   esImportante: PropTypes.bool.isRequired,
+  slogan: PropTypes.string,
+};
+
+// Especificar valores por defecto en Props pasadas a este componente
+// Se puede hacer de la forma tradicional - function MiComponente({titulo = "Desconocido"})
+// O a través de un objeto cuando son muchas las props opcionales
+FirstApp.defaultProps = {
+  slogan: "Primer ejemplo de componente en React",
 };

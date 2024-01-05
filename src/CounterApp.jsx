@@ -24,6 +24,7 @@ export const CounterApp = ({ value }) => {
   const incrementarValor = (event) => {
     // Para cambiar el valor de una variable de estado, es necesario invocar la función que devuelve el hook
     // Esto informa a React que debe volver a pintar o renderizar el componente en pantalla para mostrar el nuevo valor
+    // Cuando el componente se vuelve a renderizar, React ejecuta todo lo que está definido dentro del componente, conservando el estado actual
     setCounter(counter + 1);
   };
 
@@ -50,6 +51,11 @@ export const CounterApp = ({ value }) => {
     // Por tanto al término de la ejecución el valor de la variable de estado tendrá menos 3 unidades
   };
 
+  const resetearValor = (event) => {
+    // El valor del estado, nuevamente se establece al valor pasado en la prop del componente
+    setCounter(value);
+  };
+
   return (
     <div>
       <h1>Counter App</h1>
@@ -69,6 +75,7 @@ export const CounterApp = ({ value }) => {
       */}
       <button onClick={incrementarValor}>+1</button>
       <button onClick={decrementarValor}>-1</button>
+      <button onClick={resetearValor}>Resetear valor</button>
       <button
         onClick={function (event) {
           alert("Hola mundo");
